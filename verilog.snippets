@@ -1,0 +1,107 @@
+snippet als "always ss" 
+always @ (posedge $1 or negedge $2) begin
+	$3
+end
+endsnippet
+
+snippet alc "always comb" b
+always @ (*) begin
+	$1
+end
+endsnippet
+
+snippet input "input"
+input $1
+endsnippet
+
+snippet input[ "input mult"
+input [$1:0] $2
+endsnippet
+
+snippet output "output"
+output $1
+endsnippet
+
+snippet output[ "output mult"
+output [$1:0] $2
+endsnippet
+
+snippet outputr "output reg"
+output reg $1
+endsnippet
+
+snippet outputr[ "output reg mult"
+output reg [$1:0] $2
+endsnippet
+
+snippet reg "reg"
+reg $1;
+endsnippet
+
+snippet reg[ "regm"
+reg [$1:0] $2;
+endsnippet
+
+snippet regm "reg memory"
+reg [$1:0] $2 [$3:0];
+endsnippet
+
+snippet wire "wire"
+wire $1;
+endsnippet
+
+snippet wire[ "wire []"
+wire [$1:0] $2;
+endsnippet
+
+snippet param "paramter"
+parameter $1 = $2
+endsnippet
+
+snippet local "localparameter"
+localparameter $1 = $2;
+endsnippet
+
+snippet ass "assign "
+assign 
+endsnippet
+
+snippet assign "assign a = b"
+assign $1 = $2;
+endsnippet
+
+snippet if "if"
+if($1) begin
+	$2
+end
+endsnippet
+
+snippet case "case"
+case($1)
+	default:$2;
+endcase
+endsnippet
+
+snippet for "for"
+for($1 = $2;$1 < $3;$1 = $1 + 1) begin
+	$4
+end
+endsnippet
+
+snippet module "module without parameter"
+module $1(
+	$2
+);
+endsnippet
+
+snippet module# "module with paramter"
+module #(
+	$1
+) $2 (
+	$3
+);
+endsnippet
+
+snippet `def "define"
+\`define
+endsnippet
